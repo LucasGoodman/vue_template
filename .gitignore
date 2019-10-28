@@ -1,6 +1,14 @@
 .DS_Store
 node_modules
-/dist
+dist/
+html/
+src/assets/css/theme/*
+!src/assets/css/theme/index.css
+!src/assets/css/theme/fonts
+shell/
+
+# docker
+docker_centos1/
 
 # local env files
 .env.local
@@ -18,4 +26,5 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.sw*
+

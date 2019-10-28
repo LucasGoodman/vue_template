@@ -1,5 +1,16 @@
 module.exports = {
-  presets: [
-    '@vue/cli-plugin-babel/preset'
-  ]
-}
+    presets: [
+        '@vue/app',
+        ['@babel/env', { 'targets': { 'node': 6 }}]
+    ],
+    'plugins': [
+        [
+            'component',
+            {
+                'libraryName': 'element-ui',
+                'styleLibraryName': 'theme-chalk'
+            }
+        ],
+        // 'lodash'
+    ]
+};

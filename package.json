@@ -1,46 +1,59 @@
 {
-  "name": "fontend_template",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.3.2",
-    "vue": "^2.6.10"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-eslint": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
+    "name": "fontend_template",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build:dev": "vue-cli-service build --mode preview",
+        "build:prod": "vue-cli-service build --mode production",
+        "theme": " et -c src/assets/css/element-variables.scss  -o src/assets/css/theme -m",
+        "theme:watch": " et --watch -c src/assets/css/element-variables.scss  -o src/assets/css/theme -m",
+        "report": "vue-cli-service build --report",
+        "lint": "vue-cli-service lint ./src",
+        "lint:fix": "vue-cli-service lint --fix",
+        "stylelint": "stylelint {src,public}/**/*.{html,vue,css,less}",
+        "stylelint:fix": "stylelint {src,public}/**/*.{html,vue,css,less} --fix"
     },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
+    "dependencies": {
+        "axios": "^0.19.0",
+        "cookie-operator": "^1.2.3",
+        "core-js": "^2.6.5",
+        "element-ui": "^2.10.1",
+        "lodash": "^4.17.15",
+        "md5": "^2.2.1",
+        "vue": "^2.6.10",
+        "vue-router": "^3.0.7",
+        "vuex": "^3.0.1"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.11.0",
+        "@vue/cli-plugin-eslint": "^3.11.0",
+        "@vue/cli-service": "^3.11.0",
+        "babel-eslint": "^10.0.1",
+        "babel-plugin-component": "^1.1.1",
+        "babel-plugin-lodash": "^3.3.4",
+        "eslint": "^5.16.0",
+        "eslint-config-alloy": "^2.0.5",
+        "eslint-plugin-vue": "^5.0.0",
+        "less": "^3.0.4",
+        "less-loader": "^4.1.0",
+        "stylelint": "^10.1.0",
+        "stylelint-config-standard": "^18.3.0",
+        "stylelint-order": "^3.0.1",
+        "vue-template-compiler": "^2.6.10",
+        "husky": "^3.0.4",
+        "lint-staged": "^9.2.3"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{css,less,vue}": [
+            "eslint --fix",
+            "stylelint --fix",
+            "git add"
+        ]
     }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
 }
