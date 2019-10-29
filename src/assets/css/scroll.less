@@ -1,0 +1,21 @@
+.scroll-bar(@width: 5px) {
+    &::-webkit-scrollbar-thumb {
+        z-index: 999;
+        border-radius: 20px;
+        background-color: #dddddd;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(136, 136, 136, 0.5);
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: @width;
+        height: @width;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 20px;
+    }
+}

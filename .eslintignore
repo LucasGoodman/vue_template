@@ -1,3 +1,4 @@
 src/assets/**/*.js
+src/assets/**/*
 dist/**/*.js
 public/**/*.js
