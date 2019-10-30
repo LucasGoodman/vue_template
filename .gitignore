@@ -2,9 +2,6 @@
 node_modules
 dist/
 html/
-src/assets/css/theme/*
-!src/assets/css/theme/index.css
-!src/assets/css/theme/fonts
 shell/
 
 # docker
