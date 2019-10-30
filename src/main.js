@@ -4,7 +4,10 @@ import plugins from './plugins';
 import router from './router';
 import store from './store';
 
-import './assets/css/index.less';
+// 加载全局样式文件
+import '@/assets/css/index.less';
+// 加载icon-font组件所需的样式文件
+import '@/assets/icon/index.css';
 
 Vue.use(plugins);
 

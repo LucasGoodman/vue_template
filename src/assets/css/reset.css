@@ -1,4 +1,4 @@
-/* 重置&默认(reset&base)(tags) */
+/* 重置&默认样式 */
 *[hidefocus], input, textarea, a {
     outline: none;
 }

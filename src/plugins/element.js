@@ -22,7 +22,7 @@ import {
     // Select,
     // Option,
     // OptionGroup,
-    // Button,
+    Button,
     // ButtonGroup,
     // Table,
     // TableColumn,
@@ -96,7 +96,7 @@ export default {
         // Vue.use(Select);
         // Vue.use(Option);
         // Vue.use(OptionGroup);
-        // Vue.use(Button);
+        Vue.use(Button);
         // Vue.use(ButtonGroup);
         // Vue.use(Table);
         // Vue.use(TableColumn);
