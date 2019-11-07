@@ -6,8 +6,6 @@
         "serve": "vue-cli-service serve",
         "build:dev": "vue-cli-service build --mode preview",
         "build:prod": "vue-cli-service build --mode production",
-        "theme": " et -c src/assets/css/element-variables.scss  -o src/assets/css/theme -m",
-        "theme:watch": " et --watch -c src/assets/css/element-variables.scss  -o src/assets/css/theme -m",
         "report": "vue-cli-service build --report",
         "lint": "eslint --ext .js,.vue ./src",
         "lint:fix": "eslint --ext .js,.vue ./src --fix",

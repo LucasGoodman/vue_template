@@ -1,9 +1,21 @@
 import element from './element';
-import filters from './filter/index';
+import * as filters from './filters';
 import directives from './directives/index';
-import component from './component';
+import components from '../components/common/index';
 
-const plugins = [element, filters, directives, component];
+/**
+ * 使用插件方式引入filter
+ * 参考：https://cn.vuejs.org/v2/guide/plugins.html
+ * */
+const _filters = {
+    install(Vue) {
+        Object.keys(filters).forEach(key => {
+            Vue.filter(key, filters[key]);
+        });
+    }
+};
+
+const plugins = [element, directives, components, _filters];
 
 export default {
     install(Vue) {

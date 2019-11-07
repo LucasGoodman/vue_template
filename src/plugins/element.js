@@ -1,3 +1,6 @@
+// Segma-UI 覆盖样式
+// import '@/assets/css/segma_ui/element_rewrite.less';
+// import '@/assets/css/segma_ui/index.css';
 import {
     Pagination,
     Dialog,

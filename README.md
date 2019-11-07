@@ -49,7 +49,7 @@ npm run stylelint:fix
 ```
 ### Stylelint工具说明：
 - 本项目所用命令默认只会检查`/src`目录下所有的`html,vue,css,less,scss,sass`文件。
-- `.stylelintignore`文件只默认添加了对`src/assets/css/theme/index.css`文件忽略
+- `.stylelintignore`文件只默认添加了对`src/assets/css/segma_ui/index.css`文件忽略
 - 在`src/assets`目录下新增样式文件会进行检测，如果有不需要检测（如第三方样式、已经压缩的样式）的文件请添加至`.stylelintignore`
 
 

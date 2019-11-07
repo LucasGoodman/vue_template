@@ -6,7 +6,7 @@
     </svg>
 </template>
 <script>
-import '../../assets/icon/index';
+import '@/assets/icon_font/index.js';
 
 export default {
     name: 'IconFont',
