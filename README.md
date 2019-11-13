@@ -46,7 +46,7 @@ npm run lint
 npm run lint:fix
 ```
 **Eslint工具说明：**
-- 本项目所用命令默认只会检查`/src`目录下所有的`js`和`vue`文件。
+- 本项目所用命令默认只会检查`src`目录下所有的`js`和`vue`文件。
 - `.eslintignore`文件默认添加了对`src/assets`目录下所有js文件的忽略
 
 ### Stylelint代码检查
@@ -61,7 +61,7 @@ npm run stylelint:fix
 ```
 
 **Stylelint工具说明：**
-- 本项目所用命令默认只会检查`/src`目录下所有的`html,vue,css,less`文件。
+- 本项目所用命令默认只会检查`src`目录下所有的`html,vue,css,less`文件。
 - 在`src/assets`目录下新增样式文件会进行检测，如果有不需要检测（如第三方样式、已经压缩的样式）的文件请添加至`.stylelintignore`
 - 如果在`src/assets`目录下添加了需要忽略的文件，但是检查未通过，可以将package.json中这段代码暂时删除（删除但不要提交到代码仓库）：
 ```$json
