@@ -7,10 +7,10 @@
         "build:dev": "vue-cli-service build --mode preview",
         "build:prod": "vue-cli-service build --mode production",
         "report": "vue-cli-service build --report",
-        "lint": "eslint --ext .js,.vue ./src",
-        "lint:fix": "eslint --ext .js,.vue ./src --fix",
-        "stylelint": "stylelint src/**/*.{html,vue,css,less,scss,sass}",
-        "stylelint:fix": "stylelint src/**/*.{html,vue,css,less,scss,sass} --fix"
+        "lint": "eslint --ext .js,.vue src",
+        "lint:fix": "eslint --ext .js,.vue src --fix",
+        "stylelint": "stylelint src/**/*.{html,vue,css,less}",
+        "stylelint:fix": "stylelint src/**/*.{html,vue,css,less} --fix"
     },
     "dependencies": {
         "axios": "^0.19.0",
@@ -47,16 +47,11 @@
         }
     },
     "lint-staged": {
-        "*.js": [
+        "src/**/*.{js,vue}": [
             "eslint --fix",
             "git add"
         ],
-        "*.vue": [
-            "eslint --fix",
-            "stylelint --fix",
-            "git add"
-        ],
-        "*.{html,css,less,scss,sass}": [
+        "src/**/*.{html,css,less,vue}": [
             "stylelint --fix",
             "git add"
         ]
