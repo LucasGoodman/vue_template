@@ -15,8 +15,8 @@ const scanner = async () => {
     /**
      * sonarqubeScanner
      * @param {string} serverUrl - 服务器地址
-     * @param {string} token -     令牌
-     * @param {Object} options -   配置参数，参考文档：https://docs.sonarqube.org/latest/analysis/analysis-parameters
+     * @param {string} token     - 令牌
+     * @param {Object} options   - 配置参数，参考文档：https://docs.sonarqube.org/latest/analysis/analysis-parameters
      *      @param {string} sonar.projectKey  - 项目标识，在创建项目后不可变更，默认值为 'bigdata_fontend_' + package.json中的name字段
      *      @param {string} sonar.projectName - 项目显示名，默认值同sonar.projectKey
      *      @param {string} sonar.sources     - 包含主源文件的目录，逗号分隔路径

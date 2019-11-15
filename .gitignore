@@ -4,9 +4,6 @@ dist/
 html/
 shell/
 
-# docker
-docker_centos1/
-
 # local env files
 .env.local
 .env.*.local
@@ -24,4 +21,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+#sonar file
+.scannerwork
 
