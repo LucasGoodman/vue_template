@@ -7,6 +7,7 @@
         "build": "vue-cli-service build --mode preview",
         "build:prod": "vue-cli-service build --mode production",
         "report": "vue-cli-service build --report",
+        "sonar": "node ./sonar.js",
         "lint": "eslint --ext .js,.vue src",
         "lint:fix": "eslint --ext .js,.vue src --fix",
         "stylelint": "stylelint src/**/*.{html,vue,css,less}",
@@ -32,14 +33,15 @@
         "eslint": "^5.16.0",
         "eslint-config-alloy": "^2.0.5",
         "eslint-plugin-vue": "^5.0.0",
+        "husky": "^3.0.4",
         "less": "^3.0.4",
         "less-loader": "^4.1.0",
+        "lint-staged": "^9.2.3",
+        "sonarqube-scanner": "^2.5.0",
         "stylelint": "^10.1.0",
         "stylelint-config-standard": "^18.3.0",
         "stylelint-order": "^3.0.1",
-        "vue-template-compiler": "^2.6.10",
-        "husky": "^3.0.4",
-        "lint-staged": "^9.2.3"
+        "vue-template-compiler": "^2.6.10"
     },
     "husky": {
         "hooks": {
