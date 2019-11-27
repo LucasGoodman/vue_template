@@ -71,7 +71,17 @@ npm run stylelint:fix
  ]
 ```
 
+## 私有化部署
+1. 将`.env.privatization`环境变量文件中的变量统一改为`变量名=#变量名`的形式。
+2. 在`Dockerfile.privatization`文件中添加对应的环境变量。
+3. 在`./nginx/run.sh`添加docker运行环境变量对vue应用的环境变量替换，参考第三行。
+4. 应用构建命令`npm run build:privatization`。
+4. docker运行命令，指定环境变量:
+```shell script
+docker run --name DOCKER_NAME -p 8080:80 -e VUE_APP_TEST='TEST'  -d IMAGE_NAME:TAG
+```
+
 ## 开发规范
-待补充
+[SEGMA技术团队-前端开发规范](https://docs.qq.com/doc/DUnVnY0RnemhEdnpC)
 
 

@@ -6,6 +6,7 @@
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build --mode preview",
         "build:prod": "vue-cli-service build --mode production",
+        "build:privatization": "vue-cli-service build --mode privatization",
         "report": "vue-cli-service build --report",
         "sonar": "node ./sonar.js",
         "lint": "eslint --ext .js,.vue src",
