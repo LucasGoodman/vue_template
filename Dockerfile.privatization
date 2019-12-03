@@ -1,6 +1,7 @@
 FROM nginx:1.15-alpine
 
 # 输入参数
+ENV VUE_APP_SERVER_URL http://27.0.0.1
 ENV VUE_APP_TEST 127.0.0.1
 
 COPY nginx/h5bp/ /etc/nginx/h5bp/

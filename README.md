@@ -86,8 +86,9 @@ npm run sonar
 4. Vue应用构建命令`npm run build:privatization`。
 4. docker运行命令，通过`-e`指定环境变量:
 ```shell script
-docker run --name DOCKER_NAME -p 8080:80 -e VUE_APP_TEST='TEST'  -d IMAGE_NAME:TAG
+docker run --name DOCKER_NAME -p 8080:80 -e VUE_APP_TEST=TEST  -d IMAGE_NAME:TAG
 ```
+**默认nginx代理地址可通过`VUE_APP_SERVER_URL`变量配置，路径格式为完整url，如`http://27.0.0.1`（地址结尾请勿加`/`）**
 
 ## 开发规范
 [SEGMA技术团队-前端开发规范](https://docs.qq.com/doc/DUnVnY0RnemhEdnpC)
