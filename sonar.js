@@ -17,7 +17,7 @@ const scanner = async () => {
      * @param {string} serverUrl - 服务器地址
      * @param {string} token     - 令牌
      * @param {Object} options   - 配置参数，参考文档：https://docs.sonarqube.org/latest/analysis/analysis-parameters
-     *      @param {string} sonar.projectKey  - 项目标识，在创建项目后不可变更，默认值为 'bigdata_fontend_' + package.json中的name字段
+     *      @param {string} sonar.projectKey  - 项目标识，在创建项目后不可变更，默认值为 'bigdata_frontend_' + package.json中的name字段
      *      @param {string} sonar.projectName - 项目显示名，默认值同sonar.projectKey
      *      @param {string} sonar.sources     - 包含主源文件的目录，逗号分隔路径
      * */
@@ -25,8 +25,8 @@ const scanner = async () => {
         serverUrl: 'http://10.88.0.39:9090/sonar',
         token: 'd470f436fc46181d16a8f5f414f0da57f03e9527',
         options: {
-            'sonar.projectKey': `bigdata_fontend_${name}`,
-            'sonar.projectName': `bigdata_fontend_${name}`,
+            'sonar.projectKey': `bigdata_frontend_${name}`,
+            'sonar.projectName': `bigdata_frontend_${name}`,
             'sonar.sources': './src'
         }
     });
