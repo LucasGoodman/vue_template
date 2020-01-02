@@ -7,14 +7,30 @@
             图标：
             <icon-font :name="'demo'"></icon-font>
         </p>
-        <el-button>element-UI按钮</el-button>
-        <div class="segma-button">
-            <div class="b50-btn">
-                <el-button class="segma-s primary">
-                    <i class="el-icon-loading"></i>segma-UI按钮
-                </el-button>
-            </div>
-        </div>
+        <el-button type="primary"
+                   size="mini">
+            mini
+        </el-button>
+        <el-button type="primary">
+            small
+        </el-button>
+
+        <el-button type="primary"
+                   size="medium">
+            medium
+        </el-button>
+        <el-button type="primary"
+                   plain>
+            plain
+        </el-button>
+        <el-button type="primary"
+                   :loading="true">
+        </el-button>
+        <el-button type="primary"
+                   :loading="true"
+                   plain>
+        </el-button>
+        <br>
     </div>
 </template>
 
