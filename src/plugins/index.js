@@ -1,4 +1,5 @@
-import element from './element';
+// 项目命名
+import segma_ui from './segma_ui';
 import * as filters from './filters';
 import directives from './directives/index';
 import components from '../components/common/index';
@@ -15,7 +16,12 @@ const _filters = {
     }
 };
 
-const plugins = [element, directives, components, _filters];
+const plugins = [
+    segma_ui,
+    directives,
+    components,
+    _filters
+];
 
 export default {
     install(Vue) {
