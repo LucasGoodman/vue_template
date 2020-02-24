@@ -146,8 +146,9 @@ $axios.interceptors.response.use(
 /**
  * 统一的错误提示
  * */
-const errorTip = (message) => {
-    let msg = message.length > 20 ? '接口异常，请求失败' : message;
+const errorTip = (message, code = null) => {
+    let cut = code === '100' || code === '' || code === null;
+    let msg = cut ? (message.length > 30 ? '运行报错' : message) : message;
     let tipFn = Vue.prototype.$message.error ? Vue.prototype.$message.error : console.log;
     tipFn(msg);
 };
