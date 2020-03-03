@@ -3,10 +3,28 @@
  * 使用sonar检测代码质量：https://www.npmjs.com/package/sonarqube-scanner
  * 参考文档：https://docs.qq.com/doc/DUmVNQ3JDSEZNRWlU
  */
+const program = require('commander');
 const sonarqubeScanner = require('sonarqube-scanner');
 const fs = require('fs');
 const util = require('util');
 const readFileAsync = util.promisify(fs.readFile);
+
+program
+    .option('-s, --serverUrl <type>', 'server address')
+    .option('-t, --token <type>', 'token');
+/**
+ * 解析请求参数
+ * */
+program.parse(process.argv);
+let { serverUrl, token } = program.opts();
+if (!serverUrl) {
+    console.log('error: option \'-s, --serverUrl <type>\' argument missing');
+    return;
+}
+if (!token) {
+    console.log('error: option \'-t, --token <type>\' argument missing');
+    return;
+}
 
 const scanner = async () => {
     let data = await readFileAsync(`${process.cwd()}/package.json`);
@@ -22,8 +40,8 @@ const scanner = async () => {
      *      @param {string} sonar.sources     - 包含主源文件的目录，逗号分隔路径
      * */
     sonarqubeScanner({
-        serverUrl: 'http://10.88.0.39:9090/sonar',
-        token: 'd470f436fc46181d16a8f5f414f0da57f03e9527',
+        serverUrl,
+        token,
         options: {
             'sonar.projectKey': `bigdata_frontend_${name}`,
             'sonar.projectName': `bigdata_frontend_${name}`,
@@ -32,4 +50,3 @@ const scanner = async () => {
     });
 };
 scanner().catch(console.error);
-
