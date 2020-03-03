@@ -1,5 +1,4 @@
-// 项目命名
-import segma_ui from './segma_ui';
+import element_ui from './element_ui';
 import * as filters from './filters';
 import directives from './directives/index';
 import components from '../components/common/index';
@@ -17,7 +16,7 @@ const _filters = {
 };
 
 const plugins = [
-    segma_ui,
+    element_ui,
     directives,
     components,
     _filters

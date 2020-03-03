@@ -6,7 +6,7 @@
     </svg>
 </template>
 <script>
-import '@/assets/icon_font/index.js';
+import './index';
 
 export default {
     name: 'IconFont',
@@ -18,4 +18,13 @@ export default {
     }
 };
 </script>
-
+<style lang="less"
+       scoped>
+.icon {
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+}
+</style>
