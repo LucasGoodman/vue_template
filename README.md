@@ -1,5 +1,8 @@
 # segma前端模板项目
 
+## 更新操作
+本项目更新请强制同步：https://gitee.com/realucas/vue_template
+
 ## 项目说明
 本项目是关于西格马前端团队使用Vue开发项目的模板项目。  
 更多请见：[vue_template](https://github.com/LucasGoodman/vue_template)
