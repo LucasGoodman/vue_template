@@ -3,6 +3,8 @@ const path = require('path');
 const resolve = dir => path.join(__dirname, dir);
 
 module.exports = {
+    // 取消线上环境打包时候eslint检查
+    lintOnSave: process.env.NODE_ENV !== 'production',
     // 在htmlWebpackPlugin中增加环境变量，在index.html中使用
     chainWebpack: config => {
         config.plugin('html').tap(args => {
