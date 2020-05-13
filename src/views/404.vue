@@ -9,6 +9,7 @@
 .frame-error {
     position: absolute;
     top: 0;
+    box-sizing: border-box;
     padding-top: 30vh;
     width: 100%;
     height: 100%;

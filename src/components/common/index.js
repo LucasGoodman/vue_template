@@ -1,4 +1,4 @@
-import IconFont from './incon_font/Index.vue';
+import IconFont from './icon_font/Index.vue';
 
 const components = [
     IconFont

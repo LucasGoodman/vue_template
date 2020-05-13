@@ -2,14 +2,7 @@
  * Created by cld on 2019/07/31.
  */
 
-import segmaLoading from './load';
-
-const directives = [
-    {
-        name: 'segma-loading',
-        directive: segmaLoading
-    }
-];
+const directives = [];
 
 export default {
     install(Vue) {

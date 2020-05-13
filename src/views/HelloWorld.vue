@@ -5,7 +5,7 @@
         </p>
         <p>
             图标：
-            <icon-font :name="'demo'"></icon-font>
+            <icon-font name="demo"></icon-font>
         </p>
         <el-button type="primary"
                    size="mini">
@@ -53,6 +53,7 @@ export default {
 
     .text {
         font-size: 32px;
+        color: @color-normal;
     }
 
     .segma-button {

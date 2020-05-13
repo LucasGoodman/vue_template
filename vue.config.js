@@ -2,6 +2,17 @@
 const path = require('path');
 const resolve = dir => path.join(__dirname, dir);
 
+function addStyleResource(rule) {
+    rule.use('style-resource')
+        .loader('style-resources-loader')
+        .options({
+            patterns: [
+                resolve('src/assets/css/scroll.less'),
+                resolve('src/assets/css/var.less')
+            ]
+        });
+}
+
 module.exports = {
     // 取消线上环境打包时候eslint检查
     lintOnSave: process.env.NODE_ENV !== 'production',
@@ -16,6 +27,10 @@ module.exports = {
             .set('@', resolve('src'))
             .set('@assets', resolve('src/assets'))
             .set('@components', resolve('src/components'));
+
+        // 自动注入less变量、函数等
+        const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];
+        types.forEach(type => addStyleResource(config.module.rule('less').oneOf(type)));
     },
     productionSourceMap: false,
     devServer: {
