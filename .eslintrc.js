@@ -10,7 +10,7 @@ module.exports = {
     },
     rules: {
         'vue/html-closing-bracket-newline': 'off',
-        'function-call-argument-newline': 'never'
+        'function-call-argument-newline': 'off'
     },
     parserOptions: {
         parser: 'babel-eslint'
