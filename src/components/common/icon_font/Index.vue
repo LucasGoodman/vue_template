@@ -2,7 +2,7 @@
 <template>
     <svg class="icon"
          aria-hidden="true">
-        <use v-bind:xlink:href="`#icon-${name}`"></use>
+        <use :xlink:href="`#icon-${name}`"></use>
     </svg>
 </template>
 <script>

@@ -10,7 +10,13 @@ module.exports = {
     },
     rules: {
         'vue/html-closing-bracket-newline': 'off',
-        'function-call-argument-newline': 'off'
+        'function-call-argument-newline': 'off',
+        'vue/component-tags-order': [
+            'error',
+            {
+                order: ['template', 'script', 'style']
+            }
+        ]
     },
     parserOptions: {
         parser: 'babel-eslint'
