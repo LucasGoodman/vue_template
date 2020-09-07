@@ -1,42 +1,41 @@
 <template>
     <div class="hello">
-        <p class="text">
-            Hello World
-        </p>
+        <p class="text">Hello World</p>
         <p>
             图标：
             <icon-font name="demo"></icon-font>
         </p>
         <el-button type="primary"
-                   size="mini">
-            mini
+                   size="small"> small
         </el-button>
-        <el-button type="primary">
-            small
+        <el-button type="primary"
+                   @click="handleClick"> 我们的名字
         </el-button>
 
         <el-button type="primary"
-                   size="medium">
-            medium
+                   size="medium"> medium
         </el-button>
         <el-button type="primary"
-                   plain>
-            plain
+                   plain> plain
         </el-button>
         <el-button type="primary"
-                   :loading="true">
-        </el-button>
+                   :loading="true"></el-button>
         <el-button type="primary"
                    :loading="true"
-                   plain>
-        </el-button>
-        <br>
+                   plain></el-button>
+        <br />
     </div>
 </template>
 
 <script>
 export default {
-    name: 'HelloWorld'
+    name: 'HelloWorld',
+    methods: {
+        handleClick() {
+            let txt = '西格马前端团队';
+            alert(txt);
+        }
+    }
 };
 </script>
 
@@ -53,7 +52,6 @@ export default {
 
     .text {
         font-size: 32px;
-        color: @color-normal;
     }
 
     .segma-button {

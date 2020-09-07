@@ -15,6 +15,7 @@ module.exports = {
         'color-hex-length': 'long', // 颜色16进制指定为长符号
         'font-family-no-missing-generic-family-keyword': null, // 禁止在字体系列名称列表中缺少通用族：允许
         'selector-list-comma-newline-after': 'never-multi-line',
+        'selector-pseudo-element-no-unknown': null,
 
         /* order插件配置 */
         'order/properties-alphabetical-order': null,
@@ -206,13 +207,13 @@ module.exports = {
                 'outline-offset',
                 'opacity',
                 'filter:progid:DXImageTransform.Microsoft.Alpha(Opacity',
-                "-ms-filter:\\'progid:DXImageTransform.Microsoft.Alpha",
+                '-ms-filter:\\\'progid:DXImageTransform.Microsoft.Alpha',
                 '-ms-interpolation-mode',
                 '-webkit-box-shadow',
                 '-moz-box-shadow',
                 'box-shadow',
                 'filter:progid:DXImageTransform.Microsoft.gradient',
-                "-ms-filter:\\'progid:DXImageTransform.Microsoft.gradient",
+                '-ms-filter:\\\'progid:DXImageTransform.Microsoft.gradient',
                 'text-shadow',
                 // 分割
                 '-webkit-transition',
